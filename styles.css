@@ -1,0 +1,128 @@
+body {
+  background: linear-gradient(to bottom, #000000, #220000, #001100) no-repeat #000000;
+  color: #f5deb3;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 1.25em;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.625em;
+}
+
+p {
+  font-size: 1em;
+  margin-bottom: 1.25em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25em;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  width: 50em;
+}
+
+section {
+  width: 50em;
+  margin-bottom: 2.5em;
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  section {
+    width: 100%;
+  }
+}
+
+.mint-button {
+  display: inline-block;
+  padding: 1em 2em;
+  background-color: #f5deb3;
+  color: black;
+  font-size: 1em;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+}
+
+.mint-button:hover {
+  background-color: #ffcc99;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.625em;
+}
+
+img {
+  max-width: 100%;
+  max-height: 20em;
+  height: auto;
+  margin-bottom: 1.25em;
+}
+
+a {
+  color: #f5deb3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team-section {
+  margin-bottom: 2.5em;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-member {
+  flex-basis: 10em;
+}
+
+.team-member img {
+  max-width: 6.25em;
+  height: auto;
+  margin-bottom: 0.625em;
+}
+
+.team-member h3 {
+  font-size: 1.125em;
+  margin-bottom: 0.3125em;
+}
+
+.team-member p {
+  font-size: 0.875em;
+}
+
+footer {
+  text-align: center;
+  padding: 1.25em;
+  font-size: 0.875em;
+}
