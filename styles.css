@@ -147,6 +147,13 @@ ul li::before {
   font-size: 0.875em;
 }
 
+
+.dusty-section img {
+  max-width: 10em;
+  height: auto;
+  margin-bottom: 0.625em;
+}
+
 footer {
   text-align: center;
   padding: 1.25em;
