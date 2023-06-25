@@ -1,6 +1,15 @@
+/* 
+#403C03 : jaune or
+#D9C8A9 : jaune cassé
+#400202 : rouge foncé
+#590404 : rouge clair
+#0D0D0D : noir
+*/
+
+
 body {
-  background: linear-gradient(to bottom, #000000, #220000, #001100) no-repeat #000000;
-  color: #f5deb3;
+  background: linear-gradient(to bottom, #0D0D0D, #400202, #590404) no-repeat #0D0D0D;
+  color: #F0F0F0;
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
@@ -53,8 +62,8 @@ section {
 .mint-button {
   display: inline-block;
   padding: 1em 2em;
-  background-color: #f5deb3;
-  color: black;
+  background-color: #F0F0F0;
+  color: #0D0D0D;
   font-size: 1em;
   text-decoration: none;
   border: none;
@@ -63,7 +72,7 @@ section {
 }
 
 .mint-button:hover {
-  background-color: #ffcc99;
+  background-color: #F0F0F0;
 }
 
 h2 {
@@ -79,7 +88,7 @@ img {
 }
 
 a {
-  color: #f5deb3;
+  color: #F0F0F0;
   text-decoration: none;
 }
 
@@ -106,7 +115,7 @@ ul li::before {
   left: 0;
   width: 0.75em;
   height: 0.75em;
-  background-color: #f5deb3;
+  background-color: #F0F0F0;
   border-radius: 50%;
 }
 
