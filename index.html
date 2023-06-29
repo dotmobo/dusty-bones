@@ -21,9 +21,7 @@
   <main>
     <div class="flex-container">
       <section>
-        <h2>Dusty Bones Collection</h2>
         <img src="logo.jpg" alt="Dusty Bones Collection">
-        <a href="https://www.frameit.gg/marketplace/DUSTYBONES-c1fc90" target="_blank" class="mint-button">Mint</a>
       </section>
 
       <section>
@@ -37,11 +35,43 @@
           <li>Vote on decisions via a smart contract on FrameIt</li>
           <li>Collaborate with other MultiversX actors</li>
         </ul>
-        <h2>Whitepaper</h2>
-        <a href="whitepaper.pdf" target="_blank" class="mint-button">Download</a>
       </section>
     </div>
     
+
+    <div class="flex-container">
+      <section>
+        <h2>Whitepaper</h2>
+        <a href="whitepaper.pdf" target="_blank" class="mint-button">Download</a>
+      </section>
+      <section>
+        <h2>Dusty Bones Collection</h2>
+        <div class="carousel">
+          <div class="carousel-item active">
+            <img src="nfts/NFT_009.jpg" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="nfts/NFT_017.jpg" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="nfts/NFT_023.jpg" alt="Image 3">
+          </div>
+          <div class="carousel-item">
+            <img src="nfts/NFT_077.jpg" alt="Image 4">
+          </div>
+          <div class="carousel-item">
+            <img src="nfts/NFT_111.jpg" alt="Image 5">
+          </div>
+          <div class="carousel-item">
+            <img src="nfts/NFT_135.jpg" alt="Image 6">
+          </div>
+          <div class="carousel-item">
+            <img src="nfts/NFT_171.jpg" alt="Image 7">
+          </div>
+        </div>
+        <a href="https://www.frameit.gg/marketplace/DUSTYBONES-c1fc90" target="_blank" class="mint-button">Mint</a>
+      </section>
+    </div>
 
     <section class="team-section">
       <h2>Team</h2>
@@ -83,5 +113,17 @@
   <footer>
     &copy; 2023 Dusty Bones.
   </footer>
+
+  <script>
+    var carouselItems = document.querySelectorAll('.carousel-item');
+    var currentIndex = 0;
+    var interval = setInterval(changeSlide, 5000);
+
+    function changeSlide() {
+      carouselItems[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % carouselItems.length;
+      carouselItems[currentIndex].classList.add('active');
+    }
+  </script>
 </body>
 </html>
