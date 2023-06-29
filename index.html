@@ -10,7 +10,7 @@
   <meta name="robots" content="index, follow">
   <meta name="language" content="en">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="icon" type="image/jpeg" href="img/logo.jpg">
 </head>
 <body>
   <header>
@@ -21,7 +21,7 @@
   <main>
     <div class="flex-container">
       <section>
-        <img src="logo.jpg" alt="Dusty Bones Collection">
+        <img src="img/logo.jpg" alt="Dusty Bones Collection">
       </section>
 
       <section>
@@ -48,25 +48,34 @@
         <h2>Dusty Bones Collection</h2>
         <div class="carousel">
           <div class="carousel-item active">
-            <img src="nfts/NFT_009.jpg" alt="Image 1">
+            <img src="img/nfts/NFT_009.jpg" alt="Image 1">
           </div>
           <div class="carousel-item">
-            <img src="nfts/NFT_017.jpg" alt="Image 2">
+            <img src="img/nfts/NFT_017.jpg" alt="Image 2">
           </div>
           <div class="carousel-item">
-            <img src="nfts/NFT_023.jpg" alt="Image 3">
+            <img src="img/nfts/NFT_023.jpg" alt="Image 3">
           </div>
           <div class="carousel-item">
-            <img src="nfts/NFT_077.jpg" alt="Image 4">
+            <img src="img/nfts/NFT_077.jpg" alt="Image 4">
           </div>
           <div class="carousel-item">
-            <img src="nfts/NFT_111.jpg" alt="Image 5">
+            <img src="img/nfts/NFT_111.jpg" alt="Image 5">
           </div>
           <div class="carousel-item">
-            <img src="nfts/NFT_135.jpg" alt="Image 6">
+            <img src="img/nfts/NFT_135.jpg" alt="Image 6">
           </div>
           <div class="carousel-item">
-            <img src="nfts/NFT_171.jpg" alt="Image 7">
+            <img src="img/nfts/NFT_171.jpg" alt="Image 7">
+          </div>
+          <div class="carousel-item">
+            <img src="img/nfts/NFT_213.jpg" alt="Image 8">
+          </div>
+          <div class="carousel-item">
+            <img src="img/nfts/NFT_337.jpg" alt="Image 9">
+          </div>
+          <div class="carousel-item">
+            <img src="img/nfts/NFT_379.jpg" alt="Image 10">
           </div>
         </div>
         <a href="https://www.frameit.gg/marketplace/DUSTYBONES-c1fc90" target="_blank" class="mint-button">Mint</a>
@@ -77,17 +86,17 @@
       <h2>Team</h2>
       <div class="team-members">
         <div class="team-member">
-          <img src="stan.jpg" alt="Avatar membre 1">
+          <img src="img/stan.jpg" alt="Avatar membre 1">
           <h3>Stan</h3>
           <p>Designer</p>
         </div>
         <div class="team-member">
-          <img src="pentaxx.jpg" alt="Avatar membre 2">
+          <img src="img/pentaxx.jpg" alt="Avatar membre 2">
           <h3>Pentaxx</h3>
           <p>Social manager</p>
         </div>
         <div class="team-member">
-          <img src="mobo.jpg" alt="Avatar membre 3">
+          <img src="img/mobo.jpg" alt="Avatar membre 3">
           <h3>Mobo</h3>
           <p>Developer</p>
         </div>
@@ -97,14 +106,26 @@
     <div class="flex-container">
       <section class="dusty-section">
         <h2>Dusty, our mascot !</h2>
-        <img src="dusty.png" alt="Dusty">
+        <img src="img/dusty.png" alt="Dusty">
       </section>
       <section>
         <h2>Links</h2>
         <ul>
-          <li><a href="https://twitter.com/DBones_mvx">Twitter</a></li>
-          <li><a href="https://discord.gg/7hmqG7Cz">Discord</a></li>
-          <li><a href="https://www.frameit.gg/marketplace/DUSTYBONES-c1fc90">FrameIt</a></li>
+          <li>
+            <a href="https://twitter.com/DBones_mvx" class="list-item-link">
+              <img src="img/icons8-twitter-48.png" alt="Twitter">&nbsp;Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.gg/7hmqG7Cz" class="list-item-link">
+              <img src="img/icons8-discord-48.png" alt="Discord">&nbsp;Discord
+            </a>
+          </li>
+          <li>
+            <a href="https://www.frameit.gg/marketplace/DUSTYBONES-c1fc90" class="list-item-link">
+              <img src="img/icons8-discord-48.png" alt="FrameIt">&nbsp;FrameIt
+          </a>
+          </li>
         </ul>
       </section>
     </div>
@@ -117,7 +138,7 @@
   <script>
     var carouselItems = document.querySelectorAll('.carousel-item');
     var currentIndex = 0;
-    var interval = setInterval(changeSlide, 5000);
+    var interval = setInterval(changeSlide, 3000);
 
     function changeSlide() {
       carouselItems[currentIndex].classList.remove('active');

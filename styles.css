@@ -119,6 +119,11 @@ ul li::before {
   border-radius: 50%;
 }
 
+.list-item-link {
+  display: flex;
+  align-items: center;
+}
+
 .team-section {
   margin-bottom: 2.5em;
 }
