@@ -30,6 +30,24 @@ p {
   margin-bottom: 1.25em;
 }
 
+.fadeSlideInText {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideInAnimation 1s ease-in-out forwards;
+}
+
+@keyframes fadeSlideInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 main {
   display: flex;
   flex-direction: column;
