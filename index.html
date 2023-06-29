@@ -26,7 +26,7 @@
 
       <section>
         <h2>Roadmap</h2>
-        <ul class="ul-roadmap">
+        <ul class="ul-roadmap fade-in-list">
           <li>Create the xSafe wallet to manage funds</li>
           <li>Create Twitter, Discord, and the website</li>
           <li>Release the NFT collection</li>
@@ -136,6 +136,7 @@
   </footer>
 
   <script>
+    // Carousel
     var carouselItems = document.querySelectorAll('.carousel-item');
     var currentIndex = 0;
     var interval = setInterval(changeSlide, 3000);
@@ -145,6 +146,23 @@
       currentIndex = (currentIndex + 1) % carouselItems.length;
       carouselItems[currentIndex].classList.add('active');
     }
+
+    // List items animation
+    const listItems = document.querySelectorAll('.ul-roadmap li');
+
+    function animateListItems() {
+      listItems.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 200}ms`;
+        setTimeout(() => {
+          item.style.opacity = 1;
+          item.style.transform = 'translateY(0)';
+        }, 1);
+      });
+    }
+
+    animateListItems();
+
+
   </script>
 </body>
 </html>

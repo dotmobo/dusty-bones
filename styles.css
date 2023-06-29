@@ -124,6 +124,9 @@ ul.ul-roadmap li {
   position: relative;
   padding-left: 2em;
   margin-bottom: 0.625em;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
 }
 
 ul.ul-roadmap li::before {
