@@ -102,6 +102,23 @@ ul {
   margin: 0;
 }
 
+ul.ul-roadmap li {
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 0.625em;
+}
+
+ul.ul-roadmap li::before {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  width: 0.75em;
+  height: 0.75em;
+  background-color: #F0F0F0;
+  border-radius: 50%;
+}
+
 .list-item-link {
   display: flex;
   align-items: center;
