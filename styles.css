@@ -6,11 +6,12 @@
 #0D0D0D : noir
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
 
 body {
   background: linear-gradient(to bottom, #0D0D0D, #400202, #590404) no-repeat #0D0D0D;
   color: #F0F0F0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Fredoka', 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
