@@ -11,6 +11,8 @@
   <meta name="language" content="en">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/jpeg" href="img/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="https://unpkg.com/htmx.org@1.9.4/dist/htmx.min.js"></script>
 </head>
 <body>
   <header>
@@ -42,8 +44,33 @@
 
     <div class="flex-container">
       <section>
-        <h2>Whitepaper</h2>
-        <a href="whitepaper.pdf" target="_blank" class="mint-button">Download</a>
+        <div>
+          <h2>Whitepaper</h2>
+          <a href="whitepaper.pdf" target="_blank" class="mint-button">Download</a>
+        </div>
+        <div class="stats">
+          <div>
+            <h2>Floor Price</h2>
+            <div>
+              <span hx-get="https://api.xoxno.com/getFloorPrice/DUSTYBONES-c1fc90/EGLD" hx-trigger="load">
+                <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
+              </span>
+              <span>&nbsp;EGLD</span>
+            </div>
+          </div>
+          <div>
+            <h2>Total supply</h2>
+            <div id="supply" hx-get="https://api.xoxno.com/getCollectionOwners/DUSTYBONES-c1fc90" hx-trigger="load">
+              <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
+            </div>
+          </div>
+          <div>
+            <h2>Unique Holders</h2>
+            <div id="holders" hx-get="https://api.xoxno.com/getCollectionOwners/DUSTYBONES-c1fc90" hx-trigger="load">
+              <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
+            </div>
+          </div>
+        </div>
       </section>
       <section>
         <h2>Dusty Bones Collection</h2>
@@ -162,6 +189,18 @@
     }
 
     animateListItems();
+
+  // Htmx
+  document.addEventListener('htmx:afterSwap', function (event) {
+    if (event.target.id === "supply") {
+      const data = JSON.parse(event.target.innerText);
+      document.getElementById("supply").innerText = (data.totalSupply ?? 0) + ' / 666';
+    }
+    if (event.target.id === "holders") {
+      const data = JSON.parse(event.target.innerText);
+      document.getElementById("holders").innerText = data.hodlersInfo?.uniqueHodlers ?? '0';
+    }
+  });
 
 
   </script>

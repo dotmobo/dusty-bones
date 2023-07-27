@@ -220,3 +220,7 @@ footer {
     transform: translateX(-100%);
   }
 }
+
+.stats {
+  padding-top: 2em;
+}
