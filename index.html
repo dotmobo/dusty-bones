@@ -70,6 +70,12 @@
               <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
             </div>
           </div>
+          <div>
+            <h2>Hatom farm</h2>
+            <div id="farm" hx-get="https://api.multiversx.com/accounts/erd1hkr89plnuz6drjpy9x3w0hxmdd54n5n9d7s03gxz8yyrva4c3u4sw80sme/transactions?size=10000&receiver=erd1qqqqqqqqqqqqqpgqvtpg5nxgrjmr3nfl8zknama86putgxdz78ss7dcj4g&function=lendegate&after=1688215464" hx-trigger="load">
+              <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
+            </div>
+          </div>
         </div>
       </section>
       <section>
@@ -199,6 +205,11 @@
     if (event.target.id === "holders") {
       const data = JSON.parse(event.target.innerText);
       document.getElementById("holders").innerText = data.hodlersInfo?.uniqueHodlers ?? '0';
+    }
+    if (event.target.id === "farm") {
+      const data = JSON.parse(event.target.innerText);
+      const total = data.map(x => Number.parseInt(x.value?.slice(0, -18)))?.reduce((a, b) => a + b, 0)
+      document.getElementById("farm").innerText = (total ?? '0') + ' HsEGLD';
     }
   });
 
