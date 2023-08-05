@@ -76,6 +76,12 @@
               <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
             </div>
           </div>
+          <div>
+            <h2>xSafe Balance</h2>
+            <div id="xsafe" hx-get="https://api.multiversx.com/accounts/erd1qqqqqqqqqqqqqpgqw02egr4v4wwmaxw7t98ekpyyde4l0g6l3u4s07nfsa" hx-trigger="load">
+              <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
+            </div>
+          </div>
         </div>
       </section>
       <section>
@@ -226,6 +232,10 @@
       const data = JSON.parse(event.target.innerText);
       const total = data.map(x => Number.parseInt(x.value?.slice(0, -18)))?.reduce((a, b) => a + b, 0)
       document.getElementById("farm").innerText = (total ?? '0') + ' HsEGLD';
+    }
+    if (event.target.id === "xsafe") {
+      const data = JSON.parse(event.target.innerText);
+      document.getElementById("xsafe").innerText = (Number.parseInt(data.balance?.slice(0, -18)) ?? '0') + ' EGLD';
     }
   });
 
