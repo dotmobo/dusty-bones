@@ -235,7 +235,8 @@
     }
     if (event.target.id === "xsafe") {
       const data = JSON.parse(event.target.innerText);
-      document.getElementById("xsafe").innerText = (Number.parseInt(data.balance?.slice(0, -18)) ?? '0') + ' EGLD';
+      const slicedBalance = (data.balance?.slice(0, -18) ?? '0') || '0';
+      document.getElementById("xsafe").innerText = (Number.parseInt(slicedBalance) ?? '0') + ' EGLD';
     }
   });
 
