@@ -9,8 +9,16 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 1.25em;
+  justify-content: flex-end; /* Aligne les éléments sur l'axe principal (verticalement) à la fin du conteneur */
+      align-items: flex-end;
+}
+
+.title {
+  align-self: center;
 }
 
 h1 {
