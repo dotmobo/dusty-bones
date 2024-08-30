@@ -58,22 +58,19 @@
         <div class="stats">
           <div>
             <h2>Floor Price</h2>
-            <div>
-              <span hx-get="https://proxy-api.xoxno.com/getFloorPrice/DUSTYBONES-c1fc90/EGLD" hx-trigger="load">
-                <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
-              </span>
-              <span>&nbsp;EGLD</span>
+            <div id="floor" hx-get="https://api.xoxno.com/collection/DUSTYBONES-c1fc90/floor-price?token=EGLD" hx-trigger="load">
+              <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
             </div>
           </div>
           <div>
             <h2>Total supply</h2>
-            <div id="supply" hx-get="https://proxy-api.xoxno.com/getCollectionOwners/DUSTYBONES-c1fc90" hx-trigger="load">
+            <div id="supply" hx-get="https://api.multiversx.com/collections/DUSTYBONES-c1fc90" hx-trigger="load">
               <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
             </div>
           </div>
           <div>
             <h2>Unique Holders</h2>
-            <div id="holders" hx-get="https://proxy-api.xoxno.com/getCollectionOwners/DUSTYBONES-c1fc90" hx-trigger="load">
+            <div id="holders" hx-get="https://api.multiversx.com/collections/DUSTYBONES-c1fc90" hx-trigger="load">
               <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
             </div>
           </div>
@@ -125,7 +122,7 @@
             <img src="img/nfts/NFT_379.png" alt="Image 10">
           </div>
         </div>
-        <a href="https://www.frameit.gg/marketplace/DUSTYBONES-c1fc90/mint" target="_blank" class="mint-button">Mint</a>
+        <a href="https://xoxno.com/collection/DUSTYBONES-c1fc90" target="_blank" class="mint-button">Buy</a>
       </section>
     </div>
 
@@ -139,7 +136,7 @@
           <li>These buildings, ranging from taverns to haunted houses, must be placed on a land.</li>
         </ul>
         <a href="https://app.dustybones.xyz" target="_blank" class="mint-button">Play</a>
-        <a href="https://www.frameit.gg/marketplace/SHALAN-55b9a9/items" target="_blank" class="mint-button">Buy</a>
+        <a href="https://xoxno.com/collection/SHALAN-55b9a9" target="_blank" class="mint-button">Buy</a>
       </section>
 
       <section>
@@ -216,11 +213,6 @@
             </a>
           </li>
           <li>
-            <a href="https://www.frameit.gg/marketplace/DUSTYBONES-c1fc90" class="list-item-link">
-              <img src="img/icons8-frameit-48.png" alt="FrameIt">FrameIt
-            </a>
-          </li>
-          <li>
             <a href="https://dusty-bones.myspreadshop.fr" class="list-item-link">
               <img src="img/icons8-spreadshop-48.png" alt="Spreadshop">Spreadshop
             </a>
@@ -236,7 +228,7 @@
   </main>
 
   <footer>
-    &copy; 2023 Dusty Bones.
+    &copy; 2024 Dusty Bones.
   </footer>
 
   <script>
@@ -268,13 +260,17 @@
 
   // Htmx
   document.addEventListener('htmx:afterSwap', function (event) {
+    if (event.target.id === "floor") {
+      const data = JSON.parse(event.target.innerText);
+      document.getElementById("floor").innerText = (data.price ?? 0) + ' EGLD';
+    }
     if (event.target.id === "supply") {
       const data = JSON.parse(event.target.innerText);
-      document.getElementById("supply").innerText = (data.totalSupply ?? 0) + ' / 666';
+      document.getElementById("supply").innerText = (data.nftCount ?? 0);
     }
     if (event.target.id === "holders") {
       const data = JSON.parse(event.target.innerText);
-      document.getElementById("holders").innerText = data.uniqueHolders?.count ?? '0';
+      document.getElementById("holders").innerText = data.holderCount ?? '0';
     }
     if (event.target.id === "farm") {
       const data = JSON.parse(event.target.innerText);
