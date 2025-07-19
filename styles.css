@@ -163,41 +163,6 @@ ul.ul-roadmap li::before {
   margin-right: 0.625em;
 }
 
-.team-section {
-  margin-bottom: 2.5em;
-}
-
-.team-members {
-  display: flex;
-  justify-content: space-between;
-}
-
-.team-member {
-  flex-basis: 10em;
-}
-
-.team-member img {
-  max-width: 6.25em;
-  height: auto;
-  margin-bottom: 0.625em;
-}
-
-.team-member h3 {
-  font-size: 1.125em;
-  margin-bottom: 0.3125em;
-}
-
-.team-member p {
-  font-size: 0.875em;
-}
-
-
-.dusty-section img {
-  max-width: 10em;
-  height: auto;
-  margin-bottom: 0.625em;
-}
-
 footer {
   text-align: center;
   padding: 1.25em;
