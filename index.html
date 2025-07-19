@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dusty Bones</title>
-  <meta name="description" content="Dusty Bones is a community of NFT enthusiasts on @MultiversX. 90% of rewards are donated to holders. Only art and fun here.">
+  <meta name="description"
+    content="Dusty Bones is a community of NFT enthusiasts on @MultiversX. 90% of rewards are donated to holders. Only art and fun here.">
   <meta name="keywords" content="Dusty Bones, NFT, community, MultiversX, art, fun">
   <meta name="author" content="Dusty Bones">
   <meta name="robots" content="index, follow">
@@ -14,6 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <script src="https://unpkg.com/htmx.org@1.9.4/dist/htmx.min.js"></script>
 </head>
+
 <body>
   <header>
     <div class="game">
@@ -21,44 +24,58 @@
     </div>
     <div class="title">
       <h1>Dusty Bones</h1>
-      <p class="fadeSlideInText">Dusty Bones is a community of NFT enthusiasts on @MultiversX. 90% of rewards are donated to holders. Only art and fun here.</p>
+      <p class="fadeSlideInText">Dusty Bones is a community of NFT enthusiasts on @MultiversX. Only art and fun here.
+      </p>
     </div>
   </header>
 
   <main>
     <div class="flex-container">
       <section>
-        <img src="img/logo.png" alt="Dusty Bones Collection">
+        <h2>Shadow Lands Project</h2>
+        <img src="img/marketing.png" alt="Shadow Lands">
+        <ul class="ul-roadmap fade-in-list">
+          <li>A captivating game where mystery, magic and management intertwine in a dark and haunting universe where
+            players enter a gloomy world.</li>
+          <li>The core of the game lies in the construction and management of various mystical buildings, each offering
+            returns in $DUST, the in-game currency.</li>
+          <li>These buildings, ranging from taverns to haunted houses, must be placed on a land.</li>
+        </ul>
+        <a href="https://app.dustybones.xyz" target="_blank" class="mint-button">Play</a>
+        <a href="https://xoxno.com/collection/SHALAN-55b9a9" target="_blank" class="mint-button">Buy</a>
       </section>
 
       <section>
-        <h2>Roadmap</h2>
+        <h2>$DUST Tokenomics</h2>
+        <img src="img/dust-logo.png" alt="$Dust Token">
         <ul class="ul-roadmap fade-in-list">
-          <li>Create the xSafe wallet to manage funds</li>
-          <li>Create Twitter, Discord, and the website</li>
-          <li>Release the NFT collection</li>
-          <li>Invest funds in Hatom protocol farms</li>
-          <li>A lottery of 1 EGLD for our holders every 50 mints</li>
-          <li>Reward holders with farm interests</li>
-          <li>Vote on decisions</li>
-          <li>Collaborate with other MultiversX actors</li>
-          <li>Launch our $DUST token</li>
-          <li>Launch our Shadow Lands project</li>
+          <li><b>Ticker</b> : DUST-e7e490</li>
+          <li><b>Total supply</b> : 700 000 000</li>
+          <li><b>Game rewards 85%</b> : 600 000 000</li>
+          <li><b>Tresorery/Partnerships/Dex 15%</b> : 100 000 000</li>
+          <li>Tokens used in markets will be burned.</li>
         </ul>
+        <div class="buttons-container">
+          <div class="buttons-row">
+            <a href="https://swap.onedex.app/swap?firstToken=EGLD&secondToken=DUST-e7e490" target="_blank"
+              class="mint-button">Swap</a>
+            <a href="https://swap.onedex.app/farm" target="_blank" class="mint-button">Farm</a>
+            <a href="https://swap.onedex.app/staking" target="_blank" class="mint-button">Stake</a>
+          </div>
+          <div class="buttons-row">
+            <a href="https://e-compass.io/charts/COMPOSED/DUST/USDC" target="_blank" class="mint-button">Chart</a>
+          </div>
+        </div>
       </section>
     </div>
-    
 
     <div class="flex-container">
       <section>
-        <div>
-          <h2>Whitepaper</h2>
-          <a href="https://whitepaper.dustybones.xyz/dusty-bones-whitepaper/dusty-bones/introduction" target="_blank" class="mint-button">Read</a>
-        </div>
         <div class="stats">
           <div>
             <h2>Floor Price</h2>
-            <div id="floor" hx-get="https://api.xoxno.com/collection/DUSTYBONES-c1fc90/floor-price?token=EGLD" hx-trigger="load">
+            <div id="floor" hx-get="https://api.xoxno.com/collection/DUSTYBONES-c1fc90/floor-price?token=EGLD"
+              hx-trigger="load">
               <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
             </div>
           </div>
@@ -75,16 +92,14 @@
             </div>
           </div>
           <div>
-            <h2>Hatom farm</h2>
-            <div id="farm" hx-get="https://api.multiversx.com/accounts/erd1hkr89plnuz6drjpy9x3w0hxmdd54n5n9d7s03gxz8yyrva4c3u4sw80sme/transactions?size=10000&receiver=erd1qqqqqqqqqqqqqpgqvtpg5nxgrjmr3nfl8zknama86putgxdz78ss7dcj4g&function=lendegate&after=1688215464" hx-trigger="load">
-              <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
-            </div>
-          </div>
-          <div>
-            <h2>xSafe Balance</h2>
-            <div id="xsafe" hx-get="https://api.multiversx.com/accounts/erd1qqqqqqqqqqqqqpgqw02egr4v4wwmaxw7t98ekpyyde4l0g6l3u4s07nfsa" hx-trigger="load">
-              <i id="loading-icon" class="fas fa-spinner fa-spin"></i>
-            </div>
+            <h2>Social Network</h2>
+            <ul>
+              <li>
+                <a href="https://twitter.com/DBones_mvx" class="list-item-link">
+                  <img src="img/icons8-twitter-48.png" alt="Twitter">Twitter
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -125,110 +140,10 @@
         <a href="https://xoxno.com/collection/DUSTYBONES-c1fc90" target="_blank" class="mint-button">Buy</a>
       </section>
     </div>
-
-    <div class="flex-container">
-      <section>
-        <h2>Shadow Lands Project</h2>
-        <img src="img/marketing.png" alt="Shadow Lands">
-        <ul class="ul-roadmap fade-in-list">
-          <li>A captivating game where mystery, magic and management intertwine in a dark and haunting universe where players enter a gloomy world.</li>
-          <li>The core of the game lies in the construction and management of various mystical buildings, each offering returns in $DUST, the in-game currency.</li>
-          <li>These buildings, ranging from taverns to haunted houses, must be placed on a land.</li>
-        </ul>
-        <a href="https://app.dustybones.xyz" target="_blank" class="mint-button">Play</a>
-        <a href="https://xoxno.com/collection/SHALAN-55b9a9" target="_blank" class="mint-button">Buy</a>
-      </section>
-
-      <section>
-        <h2>$DUST Tokenomics</h2>
-        <img src="img/dust-logo.png" alt="$Dust Token">
-        <ul class="ul-roadmap fade-in-list">
-          <li><b>Ticker</b> : DUST-e7e490</li>
-          <li><b>Total supply</b> : 700 000 000</li>
-          <li><b>Game rewards 85%</b> : 600 000 000</li>
-          <li><b>Tresorery/Partnerships/Dex 15%</b> : 100 000 000</li>
-          <li>Tokens used in markets will be burned.</li>
-        </ul>
-        <div class="buttons-container">
-          <div class="buttons-row">
-            <a href="https://swap.onedex.app/swap?firstToken=EGLD&secondToken=DUST-e7e490" target="_blank" class="mint-button">Swap</a>
-            <a href="https://swap.onedex.app/farm" target="_blank" class="mint-button">Farm</a>
-            <a href="https://swap.onedex.app/staking" target="_blank" class="mint-button">Stake</a>
-          </div>
-          <div class="buttons-row">
-            <a href="https://e-compass.io/charts/COMPOSED/DUST/USDC" target="_blank" class="mint-button">Chart</a>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="flex-container">
-      <section>
-        <div>
-          <h2>Merchandising</h2>
-          <img src="img/merch.png" alt="Dusty Bones Collection">
-          <br />
-          <a href="https://dusty-bones.myspreadshop.fr" target="_blank" class="mint-button">Buy</a>
-        </div>
-      </section>
-    </div>
-
-    <section class="team-section">
-      <h2>Team</h2>
-      <div class="team-members">
-        <div class="team-member">
-          <img src="img/stan.png" alt="Avatar membre 1">
-          <h3><a href="https://twitter.com/StanWilscott">Stan</a></h3>
-          <p>Designer</p>
-        </div>
-        <div class="team-member">
-          <img src="img/pentaxx.png" alt="Avatar membre 2">
-          <h3><a href="https://twitter.com/Will_Pentaxx">Pentaxx</a></h3>
-          <p>Social manager</p>
-        </div>
-        <div class="team-member">
-          <img src="img/mobo.png" alt="Avatar membre 3">
-          <h3><a href="https://twitter.com/dotmobo">Mobo</a></h3>
-          <p>Developer</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="flex-container">
-      <section class="dusty-section">
-        <h2>Dusty, our mascot !</h2>
-        <img src="img/dusty.png" alt="Dusty">
-      </section>
-      <section>
-        <h2>Links</h2>
-        <ul>
-          <li>
-            <a href="https://twitter.com/DBones_mvx" class="list-item-link">
-              <img src="img/icons8-twitter-48.png" alt="Twitter">Twitter
-            </a>
-          </li>
-          <li>
-            <a href="https://discord.gg/B5bYnvjFDP" class="list-item-link">
-              <img src="img/icons8-discord-48.png" alt="Discord">Discord
-            </a>
-          </li>
-          <li>
-            <a href="https://dusty-bones.myspreadshop.fr" class="list-item-link">
-              <img src="img/icons8-spreadshop-48.png" alt="Spreadshop">Spreadshop
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/dbones_mvx" class="list-item-link">
-              <img src="img/icons8-instagram-48.png" alt="Instagram">Instagram
-            </a>
-          </li>
-        </ul>
-      </section>
-    </div>
   </main>
 
   <footer>
-    &copy; 2024 Dusty Bones.
+    &copy; 2025 Dusty Bones.
   </footer>
 
   <script>
@@ -258,33 +173,22 @@
 
     animateListItems();
 
-  // Htmx
-  document.addEventListener('htmx:afterSwap', function (event) {
-    if (event.target.id === "floor") {
-      const data = JSON.parse(event.target.innerText);
-      document.getElementById("floor").innerText = (data.price ?? 0) + ' EGLD';
-    }
-    if (event.target.id === "supply") {
-      const data = JSON.parse(event.target.innerText);
-      document.getElementById("supply").innerText = (data.nftCount ?? 0);
-    }
-    if (event.target.id === "holders") {
-      const data = JSON.parse(event.target.innerText);
-      document.getElementById("holders").innerText = data.holderCount ?? '0';
-    }
-    if (event.target.id === "farm") {
-      const data = JSON.parse(event.target.innerText);
-      const total = data.map(x => Number.parseInt(x.value?.slice(0, -18)))?.reduce((a, b) => a + b, 0)
-      document.getElementById("farm").innerText = (total ?? '0') + ' HsEGLD';
-    }
-    if (event.target.id === "xsafe") {
-      const data = JSON.parse(event.target.innerText);
-      const slicedBalance = (data.balance?.slice(0, -18) ?? '0') || '0';
-      document.getElementById("xsafe").innerText = (Number.parseInt(slicedBalance) ?? '0') + ' EGLD';
-    }
-  });
-
-
+    // Htmx
+    document.addEventListener('htmx:afterSwap', function (event) {
+      if (event.target.id === "floor") {
+        const data = JSON.parse(event.target.innerText);
+        document.getElementById("floor").innerText = (data.price ?? 0) + ' EGLD';
+      }
+      if (event.target.id === "supply") {
+        const data = JSON.parse(event.target.innerText);
+        document.getElementById("supply").innerText = (data.nftCount ?? 0);
+      }
+      if (event.target.id === "holders") {
+        const data = JSON.parse(event.target.innerText);
+        document.getElementById("holders").innerText = data.holderCount ?? '0';
+      }
+    });
   </script>
 </body>
+
 </html>
