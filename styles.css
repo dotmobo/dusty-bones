@@ -60,6 +60,7 @@ main {
   display: flex;
   justify-content: space-between;
   width: 50em;
+  gap: 2em;
 }
 
 section {
